@@ -1,0 +1,10 @@
+main{
+    @include commonbg(gold);
+
+    button{
+        background: $btncolor;
+        &:hover{
+            background: $btnhovercolor;
+        }
+    }
+}

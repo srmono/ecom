@@ -1,0 +1,14 @@
+#wrap{
+		width: 100%;
+		border: 1px solid tomato;
+	}
+	#left, #right{
+		float: none;
+	}
+	#left{
+		width: 98%;
+		padding: 1%;
+	}
+	#right{
+		display: none;
+	}

@@ -1,0 +1,11 @@
+/*selector { property: value; }*/
+
+#wrap{
+	background: gold;
+}
+
+#deal .product, #top .product{
+	background: gold;
+	width: 100px;
+	height: 150px;
+}

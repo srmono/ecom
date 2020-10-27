@@ -1,0 +1,102 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+/*Default Styles*/
+body{
+	
+}
+#wrap{
+	width: 1600px;
+	margin: 0px auto;
+	border: 1px solid tomato;
+}
+
+#header, #footer{
+	background: gold;
+	padding: 25px 15px;
+}
+#left{
+	width: 1000px; 
+	padding: 25px;
+	background: grey; 
+	float: left;
+	height: 25px;
+	overflow: scroll; 
+	/*height: 450px;*/
+	box-sizing: border-box;
+}
+#right{
+	width: 480px; 
+	padding: 25px;
+	background: #298CAC;
+	float: right;
+	height: 450px;
+	box-sizing: border-box;
+}
+.clear{
+	clear:both;
+}
+/*Default Styles ends*/
+
+/*Default Styles for large screens*/
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+	#wrap{
+		width: 100%;
+		border: 1px solid tomato;
+	}
+	#left, #right{
+		/*float: none;*/
+	}
+	#left{
+		width: 65%;
+	}
+	#right{
+		width: 25%;
+	}
+}
+/*Default Styles for large screens*/
+
+@media only screen and (min-width: 768px) and (max-width: 1199px){
+	#wrap{
+		width: 100%;
+		border: 1px solid tomato;
+	}
+	#left, #right{
+		float: none;
+		height: 150px
+	}
+	#left{
+		width: 100%;
+
+	}
+	#right{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 768px){
+	#wrap{
+		width: 100%;
+		border: 1px solid tomato;
+	}
+	#left, #right{
+		float: none;
+	}
+	#left{
+		width: 98%;
+		padding: 1%;
+	}
+	#right{
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+

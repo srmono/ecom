@@ -1,0 +1,18 @@
+@mixin commonbg($bg) {
+    background: $bg;
+    width: 100% - 20%;
+    padding: 15px 25px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+header{
+    @include commonbg(salmon);
+
+    button{
+        background: $btncolor;
+        &:hover{
+            background: $btnhovercolor;
+        }
+    }
+}

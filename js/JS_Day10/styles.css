@@ -1,0 +1,63 @@
+html{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    color: white;
+    background: tomato;
+    pad: 10px 30px;
+}
+button:disabled {
+    background-color: #999;
+    color: #eee;
+    cursor: wait;
+}
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(0, 0%, 40%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay .loader{
+    background-color: gold;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.overlay .loader::before,
+.overlay .loader::after{
+    position: absolute;
+    content: ' ';
+    background-color: #ddd;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    border-radius: 40%;
+    animation: 0.6s ease-in-out 0s infinite alternate both running loader;
+}
+.overlay .loader::before{
+    left: -60px;
+    transform-origin: 60px center;
+}
+.overlay .loader::before{
+    left: 60px;
+    transform-origin: -30px center;
+}
+
+@keyframes loader{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(210deg);
+    }
+}

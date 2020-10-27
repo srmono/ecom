@@ -1,0 +1,45 @@
+#wrapper{
+	margin: 0px;
+	padding: 0px;
+}
+
+@media only screen and (min-width: 578px){
+
+	.container{
+		display: flex;
+		align-items: stretch ; /*flex-start, flex-end , center*/
+		/*flex-direction: row-reverse; /*row, column, */
+	}
+	.container2{
+		display: flex;
+		/*justify-content: center;*/
+		/*justify-content: space-between;*/
+		justify-content: space-around;
+	}
+}
+.container3{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container div, .container2 div,  .container3 div{
+	padding: 10px;
+	border: 1px solid salmon;
+}
+
+.boxc{
+	flex-basis: 12%;
+}
+.box1{
+	flex: 1;
+}
+.box2{
+	flex: 2;
+}
+.box3{
+	flex: 1;
+}
+
+.box{
+	flex-basis: 30%;
+}

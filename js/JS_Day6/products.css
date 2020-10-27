@@ -1,0 +1,45 @@
+#products .prod, #discounts .prod{
+	float: left;
+	margin:5px;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid salmon;
+}
+
+#products .prod img, #discounts .prod img{
+	width: 100px;
+	height: auto;
+	margin-bottom: 5px;
+}
+#products .prod img:hover, #discounts .prod img:hover{
+	transform: scale(1.1);
+}
+#products .title, #discounts .title{
+	color: #000;
+	font-weight: bold;
+	padding: 5px;
+}
+#products .offer, #discounts .offer{
+	color: green;
+	padding: 5px;
+}
+#products .cat, #discounts .cat{
+	color: #ddd;
+}
+
+
+.clear{
+	clear: both;
+}
+#users .user{
+    background: #ccc;
+    padding: 10px;
+    margin: 5px;
+    float: left;
+    text-align: center;
+}
+#users .user img{
+    width: 120px;
+    height: auto;
+    border-radius: 60px;
+}

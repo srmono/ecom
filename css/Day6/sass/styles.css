@@ -1,0 +1,32 @@
+header, footer {
+  background: salmon;
+  width: 80%;
+  padding: 15px 25px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+header button, footer button {
+  background: gold;
+}
+
+header button:hover, footer button:hover {
+  background: burlywood;
+}
+
+main {
+  background: gold;
+  width: 80%;
+  padding: 15px 25px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+main button {
+  background: gold;
+}
+
+main button:hover {
+  background: burlywood;
+}
+/*# sourceMappingURL=styles.css.map */

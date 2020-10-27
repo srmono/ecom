@@ -1,0 +1,55 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	padding: 0 150px;
+	/*background: url(images/bgmain.png) no-repeat top center; /*no-repeat repeat-y repeat-x*/
+}
+
+#banner{
+	background: url(images/ai_full.jpg) no-repeat top center;
+	height: 255px;
+	text-align: center;
+	padding-top: 200px;
+	font-size: 72px;
+	color: salmon;
+}
+
+#list{
+	list-style: none;
+}
+
+#list li{
+	background: url(images/icon.png) no-repeat 6px 21px;
+	padding: 15px 25px; 
+}
+
+#diamond, #truck{
+	background: url(images/sprites.jpg) no-repeat;
+}
+
+#diamond{
+	width: 37px;
+	height: 32px;
+	background-position: -190px -40px;
+}
+
+
+#truck{
+	width: 37px;
+	height: 32px;
+	background-position: -80px -160px;
+}
+
+
+
+
+
+
+
+
+
+
+

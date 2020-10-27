@@ -1,0 +1,23 @@
+body{
+	font-size: 18px; /*18px = 1em */
+	font-family: arial, helvetica, serif;
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase;
+}
+#wrapper{
+	/*width: 1600px;*/
+	width: 50%;
+	height: 100px;
+	/*background: rgb(100%,50%,50%); *//*r: red, g: green, b: blue; 0 - 255(100%)*/
+	background: #3B3B3B;
+	font-size: 3em;
+}
+
+#wrap{
+	width: 520px;
+	background: gold;
+	padding: 30px 25px 35px;
+	margin: 25px;
+	border: 5px dashed brown;
+}

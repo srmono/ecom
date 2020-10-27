@@ -1,0 +1,11 @@
+Type Script ?
+
+superset of js , Microsoft in 2012 
+
+Data types
+function 
+intefaces 
+
+Env Setup
+
+typescript -> js 

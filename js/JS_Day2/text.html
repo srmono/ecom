@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			font-family: arial;
+			font-size: 12px;
+		}
+		h1{
+			font-size: 1.5em;
+		}
+		h2{
+			font-size: 1.2em;
+		}
+		a{
+			padding: 15px 20px;
+			border: 1px solid salmon;
+			background: gold;
+			border-radius: 5px;
+			color: salmon;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="data">
+		<h1>Html Text</h1>
+		<h2>Html Text</h2>
+	</div>
+
+	<a href="#" id="size-12"> Font Size 12</a>
+	<a href="#" id="size-16"> Font Size 16</a>
+	<a href="#" id="size-20"> Font Size 20</a>
+
+</body>
+<script type="text/javascript">
+	var el = document.getElementById('data');
+	function makeSizer(size){
+		return function(){
+			//document.body.style.fontSize = size + "px" 
+			el.style.fontSize = size + "px";
+		}
+	}
+	var size12 = makeSizer(12);
+	var size16 = makeSizer(16);
+	var size20 = makeSizer(20);
+
+	document.getElementById("size-12").onclick = size12;
+	document.getElementById("size-16").onclick = size16;
+	document.getElementById("size-20").onclick = size20;
+
+	
+</script>
+</html>
+
+
+
+
+

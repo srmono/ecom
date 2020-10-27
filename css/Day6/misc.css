@@ -1,0 +1,79 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+:root {
+	--main-bg: salmon;
+	--main-padding: 15px;
+}
+
+body{
+	margin:10px 100px;
+}
+html{
+	scroll-behavior: smooth;
+	font-size: 25px;
+}
+#resize{
+	width: 300px;
+	padding: 20px;
+	border:2px solid salmon;
+	resize: both;
+	overflow: auto;
+}
+
+#section1{
+	height: 800px;
+	background: gold;
+}
+#section2{
+	height: 800px;
+	background: pink;
+}
+
+#obj{
+	width: 120px;
+	height: 150px;
+	object-fit: cover;
+}
+
+
+#one {
+	font-size: 20px;
+	background: var(--main-bg);
+	padding: var(--main-padding);
+	margin-bottom: 10px;
+	/*height: 50vh; *//*1vh = 1% of my screen height*/
+	width: 50vw;
+}
+#one p{
+	font-size: 1em;
+	/*font-size: 15vmin;  1vmin = 1vh or 1vw which ever is smaller*/
+	/*font-size: 15vmax; *//* 1vmax = 1vh or 1vw which ever is bigger*/
+}
+
+
+#two {
+	background: var(--main-bg);
+	padding: var(--main-padding);
+	margin-bottom: 10px;
+}
+
+#three {
+	background: var(--main-bg);
+	padding: var(--main-padding);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
