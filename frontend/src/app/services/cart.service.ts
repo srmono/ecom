@@ -226,6 +226,65 @@ export class CartService {
       return;
     }
   }
+
+  CheckoutFromCart(userId: Number) { 
+    this.httpClient.post(`${this.ServerURL}orders/payment`, null).subscribe((res: {success: Boolean}) => {
+      console.clear();
+
+      if (res.success) {
+        //reset server data
+        this.resetServerData();
+        this.httpClient.post(`${this.ServerURL}orders/new`, { 
+          userId: userId,
+          products: this.cartDataClient.prodData
+        }).subscribe((data: OrderConfirmationResponse) => {
+          
+          this.orderService.getSingleOrder(data.order_id).then(prods => {
+            if (data.success) {
+              const navigationExtras: NavigationExtras = {
+                state: {
+                  message: data.message,
+                  products: prods,
+                  orderId: data.order_id,
+                  total: this.cartDataClient.total
+                }
+              }
+              this.spinner.hide();
+              this.router.navigate(['/thankyou'], navigationExtras).then(p => {
+                this.cartDataClient = { prodData: [{ incart: 0, id: 0 }], total: 0 }
+                this.cartTotal$.next(0);
+                localStorage.setItem('cart', JSON.stringify(this.cartDataClient))
+
+              })
+            }
+          })
+        })
+      } else {
+        this.spinner.hide();
+        this.router.navigateByUrl('/checkout').then();
+        this.toast.error(`Sorry, failed to book the order`, "Order Status", {
+          timeOut: 1500,
+          progressBar: true,
+          progressAnimation: 'increasing',
+          positionClass: 'toast-top-right'
+        })
+      }
+
+    })
+  }
+
+  resetServerData() {
+    this.cartDataServer = {
+      data: [
+        {
+         product: undefined,
+         numInCart: 0
+        }
+      ],
+      total: 0
+    };
+    this.cartDataObs$.next({...this.cartDataServer})
+  }
   private CalculateTotal() {
     let Total = 0;
 

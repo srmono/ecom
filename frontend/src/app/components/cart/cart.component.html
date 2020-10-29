@@ -1,1 +1,38 @@
-<p>cart works!</p>
+<div class="container">
+    <div *ngIf="cartData.data[0].numInCart === 0;" class="text-center my-5">
+        <h4>Your Cart is empty</h4>>
+        <button class="btn btn-primary btn-lg mt-3" routerLink="/"> GO TO SHOP </button>
+    </div>
+
+    <ng-container *ngIf="cartData.data[0].numInCart !== 0;">
+        <div class="row">
+            <div class="col my-4">
+                <table class="table">
+                    <thead table-dark>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>SubTotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let c of cartData.data; let i = index">
+                            <td class="d-flex align-items-center justify-content-arount">
+                                <img [src]="c.product.image" alt="{{c.product.name}}" height="60" class=order-1>
+                            </td>
+                            <td> title </td>
+                            <td> Price </td>
+                            <td> Quantity </td>
+                            <td> Subtotal </td>
+                        </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+
+        </div>
+    </ng-container>
+    
+</div>
