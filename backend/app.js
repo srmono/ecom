@@ -13,10 +13,14 @@ app.use(express.urlencoded({extended: false}));
 
 const productRouter = require('./routes/products');
 const orderRouter = require('./routes/order');
+const usersRouter = require('./routes/users');
+const authRouter = require('./routes/auth');
 
 //Define Routes 
 app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/auth', authRouter);
 
 app.get('/', (req, res) => {
     res.send("app is running")
